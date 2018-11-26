@@ -1,0 +1,14 @@
+{{>licenseInfo}}
+package org.openapitools.client
+
+import io.ktor.client.*
+import io.ktor.client.request.*
+import io.ktor.http.*
+import kotlinx.coroutines.*
+
+{{#imports}}import {{import}}
+{{/imports}}
+
+internal expect val ApplicationDispatcher: CoroutineDispatcher
+
+typealias MultiValueMap = Map<String,List<String>>
